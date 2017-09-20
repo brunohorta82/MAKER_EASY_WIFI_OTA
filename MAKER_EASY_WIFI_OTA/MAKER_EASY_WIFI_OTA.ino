@@ -30,8 +30,8 @@
 #define AP_TIMEOUT 180
 #define SERIAL_BAUDRATE 115200
 #define MQTT_AUTH true
-#define MQTT_USERNAME "username"
-#define MQTT_PASSWORD "password"
+#define MQTT_USERNAME "homeassistant"
+#define MQTT_PASSWORD "xptoxpto"
 #define LIGHT D1
 #define BUTTON D2
 //Variaveis e Constantes de DEBOUNCE
@@ -41,7 +41,7 @@ long lastDebounceTime = 0;
 const int debounceDelay = 50;
 
 //Constantes 
-const String HOSTNAME  = "nome_do_device";
+const String HOSTNAME  = "SuperSala";
 
 const char * OTA_PASSWORD  = "otapower";
 
@@ -54,7 +54,7 @@ const String MQTT_LIGHT_TOPIC = "sala/luz/set";
 const String MQTT_LIGHT_STATE_TOPIC = "sala/luz";
 
 //MQTT BROKERS GRATUITOS PARA TESTES https://github.com/mqtt/mqtt.github.io/wiki/public_brokers
-const char* MQTT_SERVER = "ip_ou_dns_do_broker";
+const char* MQTT_SERVER = "192.168.1.114";
 
 WiFiClient wclient;
 PubSubClient client(MQTT_SERVER,1883,wclient);
